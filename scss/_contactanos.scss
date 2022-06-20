@@ -1,5 +1,10 @@
-$yBase:#F8FF00;
-$gBase: #489E4B;
+// MAPS
+$coloresBasement:(yellowB:#F8FF00,
+    greenB: #489E4B);
+
+$yBase: map-get($coloresBasement, yellowB);
+$gBase: map-get($coloresBasement, greenB);
+
 
 .contact-container {
     min-height: 100%;
@@ -14,7 +19,7 @@ $gBase: #489E4B;
     background-color: $gBase;
     border: 2px $yBase solid;
     margin: 100px 50px 150px 50px;
-    h2 {
+    h1 {
         text-align: center;
     }
 }
@@ -29,13 +34,13 @@ $gBase: #489E4B;
 @media screen and (min-width: 1024px){
     .contact-container {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 130px 40px repeat(3, 200px);
+        grid-template-rows: 130px 40px repeat(4, 200px);
     }
 
 
     .contactsec {
         grid-column: 2 / 6;
-        grid-row: 3 / 6;
+        grid-row: 3 / 8;
         .contactform input:focus {
             background-color: black;
             color: #F8FF00;

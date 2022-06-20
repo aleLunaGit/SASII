@@ -1,5 +1,9 @@
-$yBase:#F8FF00;
-$gBase: #489E4B;
+// MAPS
+$coloresBasement:(yellowB:#F8FF00,
+    greenB: #489E4B);
+
+$yBase: map-get($coloresBasement, yellowB);
+$gBase: map-get($coloresBasement, greenB);
 
 .indoor-container {
     min-height: 100%;

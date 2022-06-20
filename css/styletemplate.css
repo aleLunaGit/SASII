@@ -10,7 +10,7 @@
   margin: 20px; }
   .aside-ubicanos iframe {
     width: 100%; }
-  .aside-ubicanos h2 {
+  .aside-ubicanos h1 {
     display: flex;
     justify-content: center;
     background-color: aliceblue;
@@ -73,7 +73,7 @@
   background-color: #489E4B;
   border: 2px #F8FF00 solid;
   margin: 100px 50px 150px 50px; }
-  .contactsec h2 {
+  .contactsec h1 {
     text-align: center; }
 
 .contactform {
@@ -85,10 +85,10 @@
 @media screen and (min-width: 1024px) {
   .contact-container {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 130px 40px repeat(3, 200px); }
+    grid-template-rows: 130px 40px repeat(4, 200px); }
   .contactsec {
     grid-column: 2 / 6;
-    grid-row: 3 / 6; }
+    grid-row: 3 / 8; }
     .contactsec .contactform input:focus {
       background-color: black;
       color: #F8FF00; }
@@ -102,29 +102,23 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 200px 40px repeat(22, 200px); }
 
-.productos-vestidor {
-  grid-column: 1 / 4;
-  grid-row: 3 / 10;
+.productos, .productos-vestidor, .productos-vestidor2, .productos-vestidor3 {
   line-height: 90px;
   background-color: #489E4B;
   margin: 45px;
   border: 5px #F8FF00 ridge; }
+
+.productos-vestidor {
+  grid-column: 1 / 4;
+  grid-row: 3 / 10; }
 
 .productos-vestidor2 {
   grid-column: 1 / 4;
-  grid-row: 10 / 17;
-  line-height: 90px;
-  background-color: #489E4B;
-  margin: 45px;
-  border: 5px #F8FF00 ridge; }
+  grid-row: 10 / 17; }
 
 .productos-vestidor3 {
   grid-column: 1 / 4;
-  grid-row: 17 / 24;
-  line-height: 90px;
-  background-color: #489E4B;
-  margin: 45px;
-  border: 5px #F8FF00 ridge; }
+  grid-row: 17 / 24; }
 
 .productos__catalogo {
   display: flex;
@@ -307,13 +301,13 @@ body {
 .sectionclot {
   grid-column: 2 / 3;
   grid-row: 5 / 7;
-  margin: 10px 0 10px 0;
   background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
   background-color: #489E4B;
-  background-size: 140%;
+  background-size: 120%;
   background-position: center;
   background-repeat: no-repeat;
-  border: 3px #F8FF00 solid; }
+  border: 3px #F8FF00 solid;
+  margin: 10px 0 10px 0; }
   .sectionclot .clot {
     text-decoration: none;
     text-align: center; }
@@ -322,7 +316,7 @@ body {
       font-size: 25px; }
 
 .aside {
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
   grid-row: 7 / 15;
   align-items: center;
   background-color: rgba(173, 24, 24, 0.65); }
@@ -368,7 +362,6 @@ body {
       width: 170px;
       height: 120px;
       padding: 15px; }
-  /* LINEAR GRADIENTE DE KEYFRAME*/
   .nav {
     border-radius: 30px;
     grid-column: 1 / 7;
@@ -380,8 +373,7 @@ body {
       font-size: 30px; }
       .nav ul li {
         font-size: 30px;
-        transition: 1s;
-        /*2da entrega final*/ }
+        transition: 1s; }
         .nav ul li:hover {
           transform: scale(1.5, 1.5); }
   .sectionindoor {
@@ -389,7 +381,7 @@ body {
     grid-row: 3 / 7;
     margin: 60px;
     transition: 1s; }
-    .sectionindoor .indoor:hover {
+    .sectionindoor:hover {
       transform: skewY(10deg); }
     .sectionindoor .indoor h2 {
       padding-top: 150px;
@@ -399,7 +391,7 @@ body {
     grid-row: 3 / 7;
     margin: 60px;
     transition: 1s; }
-    .sectionclot .clot:hover {
+    .sectionclot:hover {
       transform: skewY(-10deg); }
     .sectionclot .clot h2 {
       padding-top: 150px;

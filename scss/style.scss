@@ -4,15 +4,22 @@
 @import "indoor";
 
 // MAPS
-$coloresBasement:(
-    yellowB:#F8FF00,
-    greenB: #489E4B
-);
+$coloresBasement:(yellowB:#F8FF00,
+    greenB: #489E4B);
 
 $yBase: map-get($coloresBasement, yellowB);
 $gBase: map-get($coloresBasement, greenB);
 
+// MIXIN
 
+@mixin banner(){
+    background-color: $gBase;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px $yBase solid;
+    margin: 10px 0 10px 0;
+}
 
 @keyframes efecto {
     0% {
@@ -102,12 +109,7 @@ body {
     grid-column: 2 / 3;
     grid-row: 3 / 5;
     background-image: url(../BASEMENT/Ilustraciones/fuego-11.png);
-    background-color: $gBase;
-    background-size: 120%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 3px $yBase solid;
-    margin: 10px 0 10px 0;
+    @include banner;
 
     .indoor {
         text-decoration: none;
@@ -123,13 +125,8 @@ body {
 .sectionclot {
     grid-column: 2 / 3;
     grid-row: 5 / 7;
-    margin: 10px 0 10px 0;
     background-image: url(../BASEMENT/Ilustraciones/remera-09.png);
-    background-color: $gBase;
-    background-size: 140%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 3px $yBase solid;
+    @include banner;
 
     .clot {
         text-decoration: none;
@@ -145,7 +142,7 @@ body {
 
 
 .aside {
-    grid-column: 1 / 6;
+    grid-column: 1 / 4;
     grid-row: 7 / 15;
     align-items: center;
     background-color: rgba(173, 24, 24, 0.65);
@@ -160,8 +157,8 @@ body {
         height: 100px;
     }
 
-    .aside__bottom{
-        h3{
+    .aside__bottom {
+        h3 {
             font-size: 50px;
         }
     }
@@ -213,7 +210,6 @@ body {
         }
     }
 
-    /* LINEAR GRADIENTE DE KEYFRAME*/
     .nav {
         border-radius: 30px;
         grid-column: 1 / 7;
@@ -229,7 +225,6 @@ body {
                 font-size: 30px;
                 transition: 1s;
 
-                /*2da entrega final*/
                 &:hover {
                     transform: scale(1.5, 1.5);
                 }
@@ -243,11 +238,11 @@ body {
         margin: 60px;
         transition: 1s;
 
-        .indoor {
-            &:hover {
-                transform: skewY(10deg);
-            }
+        &:hover {
+            transform: skewY(10deg);
+        }
 
+        .indoor {
             h2 {
                 padding-top: 150px;
                 font-size: 45px;
@@ -255,17 +250,18 @@ body {
         }
     }
 
+
     .sectionclot {
         grid-column: 4 / 6;
         grid-row: 3 / 7;
         margin: 60px;
         transition: 1s;
 
-        .clot {
-            &:hover {
-                transform: skewY(-10deg);
-            }
+        &:hover {
+            transform: skewY(-10deg);
+        }
 
+        .clot {
             h2 {
                 padding-top: 150px;
                 font-size: 45px;
@@ -286,4 +282,5 @@ body {
     .footer {
         grid-column: 1 / 7;
     }
+
 }
