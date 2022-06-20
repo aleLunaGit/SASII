@@ -12,7 +12,7 @@ $gBase: map-get($coloresBasement, greenB);
     min-height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 40px repeat(22, 200px);
+    grid-template-rows: 200px 40px;
 }
 
 .productos{
@@ -64,7 +64,7 @@ $gBase: map-get($coloresBasement, greenB);
 @media screen and (min-width: 1024px) {
     .clot-container {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 130px 40px repeat(5, 200px);
+        grid-template-rows: 130px 40px;
     }
 
 
@@ -76,6 +76,9 @@ $gBase: map-get($coloresBasement, greenB);
             img {
                 width: 100%;
                 height: 100%;
+            }
+            h3{
+                font-size: 22px;
             }
         }
     }
@@ -89,6 +92,9 @@ $gBase: map-get($coloresBasement, greenB);
                 width: 100%;
                 height: 100%;
             }
+            h3{
+                font-size: 22px;
+            }
         }
     }
 
@@ -100,6 +106,9 @@ $gBase: map-get($coloresBasement, greenB);
             img {
                 width: 100%;
                 height: 100%;
+            }
+            h3{
+                font-size: 22px;
             }
         }
     }
