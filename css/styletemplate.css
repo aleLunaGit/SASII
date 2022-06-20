@@ -334,6 +334,8 @@ body {
     color: #489E4B;
     text-shadow: 5px 5px 3px #F8FF00;
     height: 100px; }
+  .aside .aside__bottom h3 {
+    font-size: 50px; }
 
 .footer {
   grid-column: 1 / 4;
